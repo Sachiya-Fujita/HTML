@@ -1,0 +1,136 @@
+.title {
+  color: #02ccba;
+}
+
+.container {
+  /*max-width: 1170px;*/
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  height: 65px;
+  width: 100%;
+  background-color: rgba(149,0,255,0.9);
+  position :fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.header-logo{
+  margin-left: -10px;
+  margin-right: auto;
+  float:left;
+}
+
+.logo{
+  height:65px;
+  color:black;
+}
+
+.header-title{
+  color: white;
+  position:relative;
+  top:-5px;
+  left: 20px;
+  float:left;
+}
+
+.navi-list{
+  float:right;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.navi-list a {
+  line-height: 65px;
+  padding: 0 25px;
+  color:black;
+  display: block;
+  float: left;
+  transition: all 0.5s;
+}
+
+.navi-list a:hover {
+  background-color: rgba(85, 255, 51, 0.9);
+}
+
+.navi-list ul{
+  list-style: none;
+}
+
+.top-wrapper {
+  padding: 180px 0 100px 0;
+  background-image: url(file:///Users/1st-impact/HTML/design/eva_home1.png);
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+.top-wrapper h1 h2 h3{
+  opacity: 0.7;
+  font-size: 45px;
+  letter-spacing: 5px;
+}
+
+.btn-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.btn-wrapper p {
+  margin: 10px 0;
+}
+
+.signup {
+  background-color: #239b76;
+}
+
+.facebook {
+  background-color: #3b5998;
+  margin-right: 10px;
+}
+
+.twitter {
+  background-color: #55acee;
+}
+
+.btn {
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.fab {
+  margin-right: 5px;
+}
+
+.story-wrapper{
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #f7f7f7;
+  text-align: center;
+}

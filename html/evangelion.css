@@ -75,6 +75,7 @@ header {
 }
 
 .top-wrapper {
+  margin-top: 65px;
   padding: 180px 0 100px 0;
   background-image: url(file:///Users/1st-impact/HTML/design/eva_home1.png);
   background-size: cover;
@@ -323,5 +324,5 @@ footer p {
 footer {
   padding-top: 30px;
   padding-bottom: 20px;
-  border-top: solid 1px #cccccc; 
+  border-top: solid 1px #cccccc;
 }

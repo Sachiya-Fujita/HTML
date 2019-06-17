@@ -24,7 +24,7 @@
             <a href="#">Home</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
-            <a href="https://ja.wikipedia.org/wiki/%E6%96%B0%E4%B8%96%E7%B4%80%E3%82%A8%E3%83%B4%E3%82%A1%E3%83%B3%E3%82%B2%E3%83%AA%E3%82%AA%E3%83%B3">Wiki</a>
+            <a href="https://ja.wikipedia.org/wiki/%E6%96%B0%E4%B8%96%E7%B4%80%E3%82%A8%E3%83%B4%E3%82%A1%E3%83%B3%E3%82%B2%E3%83%AA%E3%82%AA%E3%83%B3" target="_blank">Wiki</a>
           </div>
         </div>
       </div>
@@ -192,7 +192,7 @@
         </div>
         <div class="contact" id="contact">
           <h2>お問い合わせ</h2>
-          <div class="information">
+          <form class="information" action="index.html" method="post">
             <p>氏名</p>
             <input type="text" name="text" value="お名前">
             <p>メールアドレス</p>
@@ -209,7 +209,9 @@
                 <option value="sample">山梨</option>
               </select>
             </p>
-          </div>
+            <input type="submit" name="submitButton" value="送信する">
+            <input type="reset" name="resetButton" value="取り消す">
+          </form>
         </div>
       </div>
     </div>

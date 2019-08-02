@@ -4,17 +4,108 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="vol1.css">
   </head>
   <body>
     <header>
-      <div class="container">
-
+      <div class="content">
+        どうも！<span class="bold name">さちもす</span>です！<br>
+        やっと梅雨が明けましたね〜。終わった途端この猛暑ですが...<br>
+        今日はこの1週間、内定者バイトで学んだことをまとめていきたいと思います！<br>
+        気長にお付き合いくださいm(_ _)m
       </div>
     </header>
 
     <div class="main">
-      
+      <div class="content">
+        この1週間はjoinした部署の開発で使われている<span class="highlight">cocos2d-x</span>および<span class="highlight">C++</span>の勉強をしたので、そこで学んだことを話せる範囲でまとめていきたいと思います！頑張るぞ！！<br>
+      </div>
+      <div class="cpp">
+        <h2>
+          C++について
+        </h2>
+        <div class="content">
+          C言語を更に拡張した言語。<span class="highlight">オブジェクト指向</span>といった考え方に対応している。<br>
+          したがって、ポインタに関する理解がとても重要(授業聞いてなかった自分はここから大苦戦中...)。<br>
+          C言語ではなかったclassの概念や演算子のオーバーロードが存在する(C++のバージョンも関係するかも)。<br>
+          C++のバージョンといえばC++11以降から参照型(参照渡し)というものが存在する。<br>
+          理解が甘い状態で話すのは気が進まないが、とりあえずメモ程度に書いておく。<br>
+          参照渡しとは、引数の渡し方の1つで、C言語では値渡しとポインタ渡しが存在する。<br>
+          この2つと比較してまとめていく。<br>
+          <table>
+            <tr>
+              <th>種類</th> <th>呼び出し先の値</th> <th>呼び出し元の値</th> <th>引数</th>
+            </tr>
+
+            <tr>
+              <td>値渡し</td> <td>コピーされる</td> <td>変更されない</td> <td>実体</td>
+            </tr>
+
+            <tr>
+              <td>ポインタ渡し</td> <td>呼び出し元の値を指す</td> <td>変更される</td> <td>ポインタ</td>
+            </tr>
+
+            <tr>
+              <td>参照渡し</td> <td>呼び出し元の値を参照</td> <td>変更される</td> <td>実体</td>
+            </tr>
+
+          </table>
+          値渡しでは関数ごとに用意されたメモリの領域で値はコピーされる。<br>
+          これは引数の情報量が多い時メモリの消費が激しくあまり好ましくない。<br>
+          一方でポイント渡しの場合、引数が示すポインタを送るので引数の情報量は関係ない。<br>
+          また、呼び出し先で値に変更があった場合、呼び出し元の値も変化する。<br>
+          ポインタ渡しの主なデメリット？はnullチェックを怠るとエラーになることだ(...と思う)<br>
+          あとポインタへの理解が浅い自分にとっては普通に難しく感じる。<br>
+          参照渡しは、引数はコピーしたくない時に使える。ポインタ渡しと同じように値は渡さず、示す場所を教える(参照する)<br>
+          実体で引数を送れるのでnullが起こりにくいしエラーもわかりやすい。<br>
+          <span class="bold">参照渡しは制限の厳しいポインタ渡しみたいなものとして覚えておくことにする！</span>
+        </div>
+      </div>
+      <div class="cocos">
+        <h2>
+          cocos2d-xについて
+        </h2>
+        <div class="content">
+          cocos2d-xとは2010年に開発が始まった、<span class="highlight">オープンソース</span>の<span class="highlight">クロスプラットフォームゲームエンジン</span>。<br>
+          GUIのないUnityみたいなもの(cocos createrでUnityみたいにできるが...)<br>
+          SpriteやLabelなどのUIやエフェクト、サウンド、物理エンジンなどのコンポーネントの一部もしくは全てによって構成されている。<br>
+          マルチプラットフォームをサポートしているので、ゲームを開発してそれを複数のプラットフォームに提供する作業が手間を一切をかけずに簡単に行える利点もある。<br>
+          NodeをCreateし、Nodeを継承したSpriteなどをaddchild()、子に設定することで描画できる。<br>
+        </div>
+      </div>
+      <div class="pointer">
+        <h2>
+          ポインタについて
+        </h2>
+        <div class="content">
+          <h3>
+            ポインタと実体の違い
+          </h3>
+          <table>
+            <tr>
+              <th>　</th> <th>実体</th> <th>ポインタ</th>
+            </tr>
+            <tr>
+              <td>メモリの領域</td> <td>メモリのスタックの保存</td> <td>メモリのヒープに保存</td>
+            </tr>
+            <tr>
+              <td>インスタンス化</td> <td>hoge h;</td> <td>hoge *h = new hoge;</td>
+            </tr>
+            <tr>
+              <td>後処理</td> <td>勝手にdelete</td> <td>deleteのコード書かないとリークする</td>
+            </tr>
+          </table>
+          <h3>
+            ポインタと配列
+          </h3>
+          ポインタと配列は別物。<br>
+          大きな違いは変数や要素を書き換えようとしたときに現れる。<br>
+          ポインタは型を考慮したもので、ポインタ変数を書き換えても、示すアドレスが変わるだけである。<br>
+          配列では配列変数には代入できずA[1]=Xのような形で変更は可能(ポインタは逆にこれはできない)。<br>
+          まだまだ理解が甘いので今後学んでいき次第追記していく。<br>
+          それではまた！
+        </div>
+      </div>
     </div>
 
     <footer>

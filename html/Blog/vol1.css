@@ -1,0 +1,42 @@
+table{
+  width: 80%;
+  border-spacing: 0;
+  margin:20px;
+}
+
+table th{
+  border-bottom: solid 2px #fb5144;
+  padding: 10px 0;
+}
+
+table td{
+  border-bottom: solid 2px #ddd;
+  text-align: center;
+  padding: 10px 0;
+}
+
+h2{
+  color:red;
+  margin:20px 30px 20px 20px;
+  border-bottom: solid 1px black;
+  border-width: medium;
+}
+
+.content{
+  margin-left: 20px;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.name{
+  font-size: 18px;
+  color:white;
+  background-color:black;
+}
+
+.highlight{
+  font-weight: bold;
+  color:blue;
+}

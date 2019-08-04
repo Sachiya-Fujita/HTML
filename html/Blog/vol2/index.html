@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <div class="main">
+      <h1 class="main-title">
+        圧倒的後輩力で成長するには
+      </h1>
+      <h4 class="sub-title">~技術、経験不足の新米プログラマーがどうCAで活躍していくか~</h4>
+      <div class="content_1">
+        <div class="pref">
+          どうも！週末映画三昧の<span class="name">さちもす</span>です！<br>
+          土曜は<span class="highlight">ワイルドスピード Super Combo</span>を、日曜は<span class="highlight">天気の子</span>見てきます。<br>
+          先週分のブログが長引いたこともあって書く内容もそんなに溜まっていないのでこれからどうしていきたいか意気込み的なことを示したい。<br>
+          まぁそんな訳で自分に対するメモみたいなものなので悪しからず！<br>
+        </div>
+        <h3>
+          1週間の振り返り
+        </h3>
+        <div class="content">
+          かる〜く1週間の振り返りをしていきます。<br>
+          先週同様、C++とcocos2d-xの勉強をしながらバグ修正やリファクタリングをさせてもらいました。<br>
+          学んだことをメモメモ...
+          <ul>
+            <li>
+              shared_ptr:参照カウント方式(0になったら勝手に解放)<br>
+              → ポインタがスコープを外れた時に自動的にdeleteしたい<br>
+              → RefPtr&lt;Ref*&gt;を用いて自力で参照カウントを操作する。<br>
+              → C++11からshared_ptr導入されてみんなはぴはぴっ！<br>
+            </li>
+            <li>
+              NodeとSpriteの違いは何なのか？<br>
+              → Nodeは何も描画できないがaddchild()できて子は描画される<br>
+              → SpriteとかはNodeを継承している<br>
+            </li>
+            <li>
+              Node→AnchorPostionデフォルトで左下<br>
+              Sprite→AnchorPostionデフォルトで中心<br>
+            </li>
+            <li>
+              classとstructの違いはデフォルトスコープ<br>
+              classはprivate structはpublic<br>
+            </li>
+            <li>
+              継承の際デフォルトスコープを変えられる<br>
+              → class X:public Y はYのスコープと変わらず<br>
+              → class X:private Y はYのpublicはprivateに変わる<br>
+            </li>
+            <li>
+              左辺値参照 hoge&amp;,右辺値参照 hoge&amp;&amp;→move, auto<br>
+              →&amp;&amp;→ テンプレート変数やautoに&amp;&amp;をつけた場合には、通常の右辺値参照とは異なる動作をする
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content_2">
+        <h3>
+          後輩力で成長するには
+        </h3>
+        <h4>
+          後輩力とは
+        </h4>
+        <div class="content">
+          後輩力とはなんなのだろうか？正直私にもわからない。<br>
+          調べてみたらいくつかの記事となんと書籍まで...ふむふむ<br>
+          一応リンクを貼っておこう。いつか読まなきゃな〜。
+          <ul>
+            <li>
+              <a href="https://www.amazon.co.jp/%E3%82%BC%E3%83%AD%E3%81%8B%E3%82%89%E6%9C%80%E5%BC%B7%E3%81%AE%E4%BA%BA%E8%84%88%E3%82%92%E3%81%A4%E3%81%8B%E3%82%80%E5%BE%8C%E8%BC%A9%E5%8A%9B-%E4%BD%90%E8%97%A4-%E5%A4%A7%E5%92%8C/dp/4591155781/ref=sr_1_2?adgrpid=53088074157&gclid=Cj0KCQjwhJrqBRDZARIsALhp1WQ9vD1i75hyWWZiTLTkcdR0pcVYTakBcPaFm3YBoEil7RphV5-T0soaAlwbEALw_wcB&hvadid=338556033007&hvdev=c&hvlocphy=1009308&hvnetw=g&hvpos=1t1&hvqmt=e&hvrand=11910638281685377688&hvtargid=aud761107721993%3Akwd-334841491436&hydadcr=16033_11170776&jp-ad-ap=0&keywords=%E5%BE%8C%E8%BC%A9%E5%8A%9B&qid=1564937136&s=gateway&sr=8-2">ゼロから最強の人脈をつかむ 後輩力</a>
+            </li>
+            <li>
+              <a href="https://www.amazon.co.jp/%E5%BE%8C%E8%BC%A9%E5%8A%9B-%E5%87%A1%E4%BA%BA%E3%81%AE%E5%83%95%E3%81%8C%E3%80%81%E5%8F%8B%E3%81%A0%E3%81%A15000%E4%BA%BA%E3%81%AB%E3%81%AA%E3%82%8C%E3%81%9F%E7%A7%98%E3%81%91%E3%81%A4-%E5%85%A5%E6%B1%9F%E6%85%8E%E4%B9%9F/dp/4776207338/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&keywords=%E5%BE%8C%E8%BC%A9%E5%8A%9B&qid=1564937338&s=gateway&sr=8-1">後輩力 凡人の僕が、友だち5000人になれた秘けつ</a>
+            </li>
+          </ul>
+          サイトでの表現を引用すると、<span class="quote">”相手の先手で動き、無邪気で、謙虚な姿勢を忘れず、先輩と一緒に朝まで飲みに行けて、締めのラーメンまで食べにいけることです（帰宅後のお礼メールも忘れずに）。喜んでオゴってあげたい！と思わせてくれる人は、後輩力の高い人。”</span>
+          <a href="http://value-design.net/wordpress/?p=7149">引用先のリンク</a><br>
+          なるほど、まぁコミニケーション能力の1つかな？気遣いができて、謙虚で素直な人材か...とても聞こえがいい。<br>
+          次節以降で後輩力にこだわる理由を述べていくので良かったら→<br>
+        </div>
+        <h4>
+          なぜ後輩力なのか？
+        </h4>
+        <div class="content">
+          なぜ後輩力、後輩力と連呼しているのか。それは自分にはまだそれしかないからだ。<br>
+          いや、後輩力が本当にあるのかはわからない。<br>
+          だが、尊敬できるCAの人事の方に「圧倒的後輩力で成長してきてくれ！」と言われて、なんかしっくりきたのは覚えている。<br>
+          私は、新しい人に会うのが好きだし、飲み会やイベントを企画することも好きだ。<br>
+          気遣いはあまりしている自覚はないけど、初対面の人や目上の方々と話すのは得意な気がしている。<br>
+          「コミュ力高いね！」と言われることが多い。(実際頑張ってキャラを演じている時もあるよ当然)<br>
+          まぁ目上の方には気に入られることが多い...かもしれない(同期とかには怖がられることもあったけどそれはまたいずれ)<br>
+          とにかく私は後輩力で成長していきたい、いくしかない。どうしていこうか。。。<br>
+
+        </div>
+        <h4>
+          後輩力で何ができるか
+        </h4>
+        <div class="content">
+          今まで何度も述べてきたことだが私は技術力がない。経験が少ない。当然だ、プログラミングを始めたのは2018年の12月なのだから。<br>
+          おそらく今の所CAのエンジニアの中でもっとも技術と経験がない人材だろう。<br>
+          だからといってこれを言い訳にしたいとは思っていないし、いつまでもこのままでいる気はない。<br>
+          これらの欠点を自分の持ってる数少ない力、つまり後輩力で補っていきたいと考えている。<br>
+          先輩方や技術の高い同期との交流を誰よりもとって、経験をするチャンスを掴む。<br>
+          たくさん話を聞いてモチベを上げる、inputをしていく。<br>
+          常に謙虚な姿勢て人の話をよく聞き、質問をする。素直に学ぶ。<br>
+          幸いにもCAの社風に後輩力、素直さはあっているのだと思う。<br>
+          だからこそ運よく？幸いにも？内定を頂けた。(心から感謝を述べたい。)<br>
+          このチャンスを生かし、広げていくためにも後輩力を元に挑戦を続けていきたい。
+        </div>
+        <div class="end">
+          今回はこんなところで締めたいと思う。<br><br>
+          それではまた！<br>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+
+    </footer>
+  </body>
+</html>

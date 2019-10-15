@@ -1,0 +1,65 @@
+.main {
+    margin:20px;
+  }
+  
+  .main-title{
+    color:#ff7f50;
+  }
+  
+  .sub-title{
+    color:#ff69b4;
+    margin-left: 40px;
+  }
+  
+  .name{
+    color:white;
+    background-color: black;
+    font-size: 18px;
+  }
+  
+  .highlight{
+    color: blue;
+  }
+  
+  h2{
+    color:red;
+    font-size: 36px;
+    margin-top: 24px;
+  }
+  
+  li{
+    margin: 0px 10px;
+    list-style-type: none;
+  }
+  
+  div.content_2 ul{
+    list-style: none;
+    margin: -20px -10px 0 -10px;
+  }
+  
+  .quote{
+    font-style:italic;
+  }
+  
+  div.content_2 h4{
+    font-weight: bold;
+    color: #696969;
+  }
+  
+  div #week2,#week4,#week7,#week9{
+    margin-top:24px;
+  }
+
+  div #dinner,#intercourse,#meeting,#LT,#darts{
+    margin-top:24px;
+  }
+
+  header{
+      margin-bottom: 24px;
+  }
+
+  a.anchor{
+    display: block;
+    padding-top: 70px;
+    margin-top: -70px;
+  }
